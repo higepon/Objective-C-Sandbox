@@ -48,6 +48,13 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 }
 */
 
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(170, 170);
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -62,6 +69,7 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.photoImageView.image = [UIImage imageNamed:self.photos[indexPath.row]];
+
 
     return cell;
 }

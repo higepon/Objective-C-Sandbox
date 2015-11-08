@@ -26,16 +26,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffx-zb-bhN">
-                                            <rect key="frame" x="-134" y="-57" width="240" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ffx-zb-bhN">
+                                            <rect key="frame" x="5" y="5" width="40" height="40"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="Ffx-zb-bhN" firstAttribute="leading" secondItem="t4M-fO-F2J" secondAttribute="leading" constant="5" id="3l6-xz-CeU"/>
                                     <constraint firstItem="Ffx-zb-bhN" firstAttribute="centerX" secondItem="t4M-fO-F2J" secondAttribute="centerX" id="4HH-pn-y77"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ffx-zb-bhN" secondAttribute="trailing" constant="5" id="EQZ-Xv-wZW"/>
                                     <constraint firstItem="Ffx-zb-bhN" firstAttribute="centerY" secondItem="t4M-fO-F2J" secondAttribute="centerY" id="FP3-WG-y51"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ffx-zb-bhN" secondAttribute="bottom" constant="5" id="aAE-16-MFw"/>
+                                    <constraint firstItem="Ffx-zb-bhN" firstAttribute="top" secondItem="t4M-fO-F2J" secondAttribute="top" constant="5" id="vYc-Mm-bvO"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4HH-pn-y77"/>
+                                        <exclude reference="FP3-WG-y51"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="photoImageView" destination="Ffx-zb-bhN" id="76n-Xv-tHu"/>
                                 </connections>
