@@ -6,24 +6,29 @@
 //  Copyright © 2015 Higepon Taro Minowa. All rights reserved.
 //
 
+#import "PhotoCollectionViewCell.h"
 #import "PhotoCollectionViewController.h"
 
 @interface PhotoCollectionViewController ()
+
+@property (nonatomic) NSArray *photos;
 
 @end
 
 @implementation PhotoCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+    self.photos = @[@"candy.jpg", @"mexican.jpg", @"goalie.jpg"];
+
+
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -46,21 +51,18 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return self.photos.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.photoImageView.image = [UIImage imageNamed:self.photos[indexPath.row]];
+
     return cell;
 }
 

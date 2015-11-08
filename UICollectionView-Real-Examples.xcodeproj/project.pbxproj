@@ -18,6 +18,7 @@
 		B382C8441BEF85FB005F0695 /* mexican.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B382C8411BEF85FB005F0695 /* mexican.jpg */; };
 		B382C8451BEF85FB005F0695 /* goalie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B382C8421BEF85FB005F0695 /* goalie.jpg */; };
 		B382C8481BEF86C1005F0695 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B382C8471BEF86C1005F0695 /* PhotoCollectionViewController.m */; };
+		B382C84B1BEF88A5005F0695 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B382C84A1BEF88A5005F0695 /* PhotoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		B382C8421BEF85FB005F0695 /* goalie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goalie.jpg; sourceTree = "<group>"; };
 		B382C8461BEF86C1005F0695 /* PhotoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewController.h; sourceTree = "<group>"; };
 		B382C8471BEF86C1005F0695 /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
+		B382C8491BEF88A5005F0695 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		B382C84A1BEF88A5005F0695 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				B382C80C1BEF82D4005F0695 /* Supporting Files */,
 				B382C8461BEF86C1005F0695 /* PhotoCollectionViewController.h */,
 				B382C8471BEF86C1005F0695 /* PhotoCollectionViewController.m */,
+				B382C8491BEF88A5005F0695 /* PhotoCollectionViewCell.h */,
+				B382C84A1BEF88A5005F0695 /* PhotoCollectionViewCell.m */,
 			);
 			path = "UICollectionView-Real-Examples";
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B382C8481BEF86C1005F0695 /* PhotoCollectionViewController.m in Sources */,
+				B382C84B1BEF88A5005F0695 /* PhotoCollectionViewCell.m in Sources */,
 				B382C8111BEF82D4005F0695 /* AppDelegate.m in Sources */,
 				B382C80E1BEF82D4005F0695 /* main.m in Sources */,
 			);
