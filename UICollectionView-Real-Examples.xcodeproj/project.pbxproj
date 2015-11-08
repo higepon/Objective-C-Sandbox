@@ -15,6 +15,9 @@
 		B382C81C1BEF82D4005F0695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B382C81A1BEF82D4005F0695 /* LaunchScreen.storyboard */; };
 		B382C8271BEF82D5005F0695 /* UICollectionView_Real_ExamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B382C8261BEF82D5005F0695 /* UICollectionView_Real_ExamplesTests.m */; };
 		B382C8321BEF82D5005F0695 /* UICollectionView_Real_ExamplesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B382C8311BEF82D5005F0695 /* UICollectionView_Real_ExamplesUITests.m */; };
+		B382C8431BEF85FB005F0695 /* candy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B382C8401BEF85FB005F0695 /* candy.jpg */; };
+		B382C8441BEF85FB005F0695 /* mexican.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B382C8411BEF85FB005F0695 /* mexican.jpg */; };
+		B382C8451BEF85FB005F0695 /* goalie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B382C8421BEF85FB005F0695 /* goalie.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		B382C82D1BEF82D5005F0695 /* UICollectionView-Real-ExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UICollectionView-Real-ExamplesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B382C8311BEF82D5005F0695 /* UICollectionView_Real_ExamplesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionView_Real_ExamplesUITests.m; sourceTree = "<group>"; };
 		B382C8331BEF82D5005F0695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B382C8401BEF85FB005F0695 /* candy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = candy.jpg; sourceTree = "<group>"; };
+		B382C8411BEF85FB005F0695 /* mexican.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mexican.jpg; sourceTree = "<group>"; };
+		B382C8421BEF85FB005F0695 /* goalie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goalie.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		B382C80B1BEF82D4005F0695 /* UICollectionView-Real-Examples */ = {
 			isa = PBXGroup;
 			children = (
+				B382C83F1BEF85E8005F0695 /* Resources */,
 				B382C80F1BEF82D4005F0695 /* AppDelegate.h */,
 				B382C8101BEF82D4005F0695 /* AppDelegate.m */,
 				B382C8121BEF82D4005F0695 /* ViewController.h */,
@@ -138,6 +145,16 @@
 				B382C8331BEF82D5005F0695 /* Info.plist */,
 			);
 			path = "UICollectionView-Real-ExamplesUITests";
+			sourceTree = "<group>";
+		};
+		B382C83F1BEF85E8005F0695 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B382C8401BEF85FB005F0695 /* candy.jpg */,
+				B382C8411BEF85FB005F0695 /* mexican.jpg */,
+				B382C8421BEF85FB005F0695 /* goalie.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +262,10 @@
 			files = (
 				B382C81C1BEF82D4005F0695 /* LaunchScreen.storyboard in Resources */,
 				B382C8191BEF82D4005F0695 /* Assets.xcassets in Resources */,
+				B382C8441BEF85FB005F0695 /* mexican.jpg in Resources */,
 				B382C8171BEF82D4005F0695 /* Main.storyboard in Resources */,
+				B382C8451BEF85FB005F0695 /* goalie.jpg in Resources */,
+				B382C8431BEF85FB005F0695 /* candy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
