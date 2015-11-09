@@ -11,6 +11,7 @@
 @interface PhotoCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
 
 
 @end

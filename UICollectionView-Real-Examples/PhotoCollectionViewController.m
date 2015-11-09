@@ -12,6 +12,7 @@
 @interface PhotoCollectionViewController ()
 
 @property (nonatomic) NSArray *photos;
+@property (nonatomic) NSArray *texts;
 
 @end
 
@@ -25,12 +26,9 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     self.photos = @[@"candy.jpg", @"mexican.jpg", @"goalie.jpg"];
-
-
-    // Register cell classes
-//    [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    self.texts = @[@"Candy, also called sweets or lollies, is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy. Vegetables, fruit, or nuts which have been glazed and coated with sugar are said to be candied.", /* https://en.wikipedia.org/wiki/Candy */
+                   @"Mexican may refer to: Related to, from, or connected to Mexico, a country in north America", /* https://en.wikipedia.org/wiki/Mexican */
+                   @"In many team sports which involve scoring goals, a goalkeeper (termed goaltender, netminder, goalie, or keeper in some sports) is a designated player charged with directly preventing the opposing team from scoring by intercepting shots at goal." /* https://en.wikipedia.org/wiki/Goalkeeper */];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,7 +67,7 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.photoImageView.image = [UIImage imageNamed:self.photos[indexPath.row]];
-
+    cell.descLabel.text = self.texts[indexPath.row];
 
     return cell;
 }
