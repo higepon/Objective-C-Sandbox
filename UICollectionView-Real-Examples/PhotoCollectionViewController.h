@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoCollectionViewLayout.h"
 
-@interface PhotoCollectionViewController : UICollectionViewController
+@interface PhotoCollectionViewController : UICollectionViewController <PhotoCollectionLayoutDelegate>
+
+
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PinterestLayoutDelegate
+@protocol PhotoCollectionLayoutDelegate
 
 - (CGFloat)collectionview:(UICollectionView *)collectionView hightForPhotoAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth;
 
@@ -17,5 +17,7 @@
 @end
 
 @interface PhotoCollectionViewLayout : UICollectionViewLayout
+
+@property (nonatomic) id<PhotoCollectionLayoutDelegate> delegate;
 
 @end

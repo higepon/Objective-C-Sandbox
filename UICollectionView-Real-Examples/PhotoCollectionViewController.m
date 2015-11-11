@@ -9,6 +9,8 @@
 #import "PhotoCollectionViewCell.h"
 #import "PhotoCollectionViewController.h"
 
+@import AVFoundation;
+
 @interface PhotoCollectionViewController ()
 
 @property (nonatomic) NSArray *photos;
@@ -23,12 +25,17 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    PhotoCollectionViewLayout *layout = (PhotoCollectionViewLayout *)self.collectionView.collectionViewLayout;
+    layout.delegate = self;
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     self.photos = @[@"candy.jpg", @"mexican.jpg", @"goalie.jpg"];
     self.texts = @[@"Candy, also called sweets or lollies, is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy. Vegetables, fruit, or nuts which have been glazed and coated with sugar are said to be candied.", /* https://en.wikipedia.org/wiki/Candy */
                    @"Mexican may refer to: Related to, from, or connected to Mexico, a country in north America", /* https://en.wikipedia.org/wiki/Mexican */
                    @"In many team sports which involve scoring goals, a goalkeeper (termed goaltender, netminder, goalie, or keeper in some sports) is a designated player charged with directly preventing the opposing team from scoring by intercepting shots at goal." /* https://en.wikipedia.org/wiki/Goalkeeper */];
+
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,12 +53,14 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 }
 */
 
+/*
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(170, 170);
 }
+*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -72,35 +81,21 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
     return cell;
 }
 
+
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (CGFloat)collectionview:(UICollectionView *)collectionView hightForPhotoAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth
+{
+    UIImage *image = [UIImage imageNamed:self.photos[indexPath.row]];
+    CGRect boundingRect =  CGRectMake(0, 0, withWidth, MAXFLOAT);
+    CGRect rect = AVMakeRectWithAspectRatioInsideRect(image.size, boundingRect);
+    return rect.size.height;
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+- (CGFloat)collectionview:(UICollectionView *)collectionView hightForDescriptionAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth
+{
+    return 30;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
