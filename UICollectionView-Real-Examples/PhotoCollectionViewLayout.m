@@ -74,7 +74,6 @@ static const CGFloat kCellPadding = 6.0;
     [yOffset addObject:@(0)];
     [yOffset addObject:@(0)];
 
-
     for (NSUInteger itemIndex = 0; itemIndex < [self.collectionView numberOfItemsInSection:0]; itemIndex++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:itemIndex inSection:0];
         CGFloat width = columnWidth - kCellPadding * 2;
@@ -91,7 +90,6 @@ static const CGFloat kCellPadding = 6.0;
         self.contentHeight =MAX(self.contentHeight, CGRectGetMaxY(frame));
         yOffset[column]  = @([yOffset[column] floatValue] + height);
         column = column >= (kNumberOfColumns - 1) ? 0 : ++column;
-
     }
 }
 
