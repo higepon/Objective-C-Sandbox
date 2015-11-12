@@ -11,7 +11,6 @@
 @protocol PhotoCollectionLayoutDelegate
 
 - (CGFloat)collectionview:(UICollectionView *)collectionView hightForPhotoAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth;
-
 - (CGFloat)collectionview:(UICollectionView *)collectionView hightForDescriptionAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth;
 
 @end

@@ -25,11 +25,10 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+
     PhotoCollectionViewLayout *layout = (PhotoCollectionViewLayout *)self.collectionView.collectionViewLayout;
     layout.delegate = self;
 
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     self.photos = @[@"terminal.png", @"candy.jpg", @"mexican.jpg", @"goalie.jpg"];
     self.texts = @[@"Hacker", @"Candy, also called sweets or lollies, is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy. Vegetables, fruit, or nuts which have been glazed and coated with sugar are said to be candied.", /* https://en.wikipedia.org/wiki/Candy */
                    @"Mexican may refer to: Related to, from, or connected to Mexico, a country in north America", /* https://en.wikipedia.org/wiki/Mexican */
@@ -38,17 +37,11 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
     [self.collectionView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.photos.count;
@@ -58,17 +51,15 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.photoImageView.image = [UIImage imageNamed:self.photos[indexPath.row]];
     cell.descLabel.text = self.texts[indexPath.row];
-
     return cell;
 }
-
 
 #pragma mark <UICollectionViewDelegate>
 
 - (CGFloat)collectionview:(UICollectionView *)collectionView hightForPhotoAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth
 {
     UIImage *image = [UIImage imageNamed:self.photos[indexPath.row]];
-    CGRect boundingRect =  CGRectMake(0, 0, withWidth, MAXFLOAT);
+    CGRect boundingRect = CGRectMake(0, 0, withWidth, MAXFLOAT);
     CGRect rect = AVMakeRectWithAspectRatioInsideRect(image.size, boundingRect);
     return rect.size.height;
 }
@@ -78,7 +69,6 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
     NSString *text = self.texts[indexPath.row];
     UILabel* label = [UILabel new]; // todo
     CGRect rect = [text boundingRectWithSize:CGSizeMake(withWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : label.font} context:nil];
-//    NSLog(@"%@ width = %g height = %g", comment, withWidth, rect.size.height);
     return rect.size.height;
 }
 

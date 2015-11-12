@@ -18,6 +18,7 @@ static const CGFloat kCellPadding = 6.0;
 
 @end
 
+// http://www.raywenderlich.com/107439/uicollectionview-custom-layout-tutorial-pinterest
 @implementation PhotoCollectionViewLayout
 
 - (instancetype)init
@@ -29,7 +30,6 @@ static const CGFloat kCellPadding = 6.0;
     }
     return self;
 }
-
 
 - (CGFloat)_contentWidth
 {
@@ -45,7 +45,7 @@ static const CGFloat kCellPadding = 6.0;
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSMutableArray *layoutAttributes = [NSMutableArray new];
-    for (UICollectionViewLayoutAttributes* attributes  in self.cache) {
+    for (UICollectionViewLayoutAttributes* attributes in self.cache) {
         if (CGRectIntersectsRect(attributes.frame, rect)) {
             [layoutAttributes addObject:attributes];
         }
