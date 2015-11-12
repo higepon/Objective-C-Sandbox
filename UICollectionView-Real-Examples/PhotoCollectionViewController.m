@@ -24,7 +24,7 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     PhotoCollectionViewLayout *layout = (PhotoCollectionViewLayout *)self.collectionView.collectionViewLayout;
     layout.delegate = self;
 
@@ -42,25 +42,6 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-/*
-- (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout *)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(170, 170);
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -94,7 +75,11 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 
 - (CGFloat)collectionview:(UICollectionView *)collectionView hightForDescriptionAtIndexPath:(NSIndexPath *)indexPath withWiddth:(CGFloat)withWidth
 {
-    return 30;
+    NSString *text = self.texts[indexPath.row];
+    UILabel* label = [UILabel new]; // todo
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(withWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : label.font} context:nil];
+//    NSLog(@"%@ width = %g height = %g", comment, withWidth, rect.size.height);
+    return rect.size.height;
 }
 
 
