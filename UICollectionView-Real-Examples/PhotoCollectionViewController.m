@@ -30,8 +30,8 @@ static NSString * const reuseIdentifier = @"PhotoCollectionViewCell";
 
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
-    self.photos = @[@"candy.jpg", @"mexican.jpg", @"goalie.jpg"];
-    self.texts = @[@"Candy, also called sweets or lollies, is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy. Vegetables, fruit, or nuts which have been glazed and coated with sugar are said to be candied.", /* https://en.wikipedia.org/wiki/Candy */
+    self.photos = @[@"terminal.png", @"candy.jpg", @"mexican.jpg", @"goalie.jpg"];
+    self.texts = @[@"Hacker", @"Candy, also called sweets or lollies, is a confection that features sugar as a principal ingredient. The category, called sugar confectionery, encompasses any sweet confection, including chocolate, chewing gum, and sugar candy. Vegetables, fruit, or nuts which have been glazed and coated with sugar are said to be candied.", /* https://en.wikipedia.org/wiki/Candy */
                    @"Mexican may refer to: Related to, from, or connected to Mexico, a country in north America", /* https://en.wikipedia.org/wiki/Mexican */
                    @"In many team sports which involve scoring goals, a goalkeeper (termed goaltender, netminder, goalie, or keeper in some sports) is a designated player charged with directly preventing the opposing team from scoring by intercepting shots at goal." /* https://en.wikipedia.org/wiki/Goalkeeper */];
 
