@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Dl-zy-k07">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fAJ-ZF-w6v">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -28,7 +28,7 @@
                                             <rect key="frame" x="5" y="164.5" width="174" height="20.5"/>
                                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -69,5 +69,39 @@
             </objects>
             <point key="canvasLocation" x="294" y="241"/>
         </scene>
+        <!--Image move-->
+        <scene sceneID="3Y0-Dl-V1P">
+            <objects>
+                <viewController title="Image move" id="fAJ-ZF-w6v" customClass="ImagesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JFv-9K-9uf"/>
+                        <viewControllerLayoutGuide type="bottom" id="jxr-88-lcc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhK-AH-Taj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goalie.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UMp-uC-MM3">
+                                <rect key="frame" x="259" y="199" width="208" height="139"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="candy.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CCm-G0-NA6">
+                                <rect key="frame" x="48" y="175" width="147" height="96"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="candyImage" destination="CCm-G0-NA6" id="ndy-Kd-3rW"/>
+                        <outlet property="goalieImage" destination="UMp-uC-MM3" id="XQU-vc-qbq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QrY-Bv-WCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="640"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="candy.jpg" width="2048" height="2048"/>
+        <image name="goalie.jpg" width="1080" height="1080"/>
+    </resources>
 </document>

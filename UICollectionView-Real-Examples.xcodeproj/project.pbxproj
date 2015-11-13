@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B30A1D8C1BF4CAC50067DF68 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = B30A1D8B1BF4CAC50067DF68 /* terminal.png */; };
+		B30A1D8F1BF4DDCC0067DF68 /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B30A1D8E1BF4DDCC0067DF68 /* ImagesViewController.m */; };
 		B37933B01BF0612000B3C25E /* PhotoCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B37933AF1BF0612000B3C25E /* PhotoCollectionViewLayout.m */; };
 		B382C80E1BEF82D4005F0695 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B382C80D1BEF82D4005F0695 /* main.m */; };
 		B382C8111BEF82D4005F0695 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B382C8101BEF82D4005F0695 /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		B30A1D8B1BF4CAC50067DF68 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terminal.png; sourceTree = "<group>"; };
+		B30A1D8D1BF4DDCC0067DF68 /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesViewController.h; sourceTree = "<group>"; };
+		B30A1D8E1BF4DDCC0067DF68 /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesViewController.m; sourceTree = "<group>"; };
 		B37933AE1BF0612000B3C25E /* PhotoCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewLayout.h; sourceTree = "<group>"; };
 		B37933AF1BF0612000B3C25E /* PhotoCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewLayout.m; sourceTree = "<group>"; };
 		B382C8091BEF82D4005F0695 /* UICollectionView-Real-Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UICollectionView-Real-Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +118,8 @@
 		B382C80B1BEF82D4005F0695 /* UICollectionView-Real-Examples */ = {
 			isa = PBXGroup;
 			children = (
+				B30A1D8D1BF4DDCC0067DF68 /* ImagesViewController.h */,
+				B30A1D8E1BF4DDCC0067DF68 /* ImagesViewController.m */,
 				B382C83F1BEF85E8005F0695 /* Resources */,
 				B382C80F1BEF82D4005F0695 /* AppDelegate.h */,
 				B382C8101BEF82D4005F0695 /* AppDelegate.m */,
@@ -308,6 +313,7 @@
 				B382C84B1BEF88A5005F0695 /* PhotoCollectionViewCell.m in Sources */,
 				B382C8111BEF82D4005F0695 /* AppDelegate.m in Sources */,
 				B382C80E1BEF82D4005F0695 /* main.m in Sources */,
+				B30A1D8F1BF4DDCC0067DF68 /* ImagesViewController.m in Sources */,
 				B37933B01BF0612000B3C25E /* PhotoCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
